@@ -232,6 +232,7 @@ nav{
     padding-right: 5%;
 }
 
+
 .history{
     display: flex;
     justify-content: center;
@@ -518,7 +519,7 @@ nav{
     margin-bottom: 7%;
 }
 
-.volunteer_btn button{
+.volunteer_btn2 button{
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 10px;
