@@ -171,18 +171,20 @@ nav{
 }
 
 .img_container{
-    width: 60%;
+    width: 50%;
 }
 
 .img_container img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -webkit-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
 }
 
 .hero_right{
-    width:40%;
+    width:50%;
     display: flex;
     flex-direction: column;
     padding-left: 3%;
@@ -240,7 +242,6 @@ nav{
 .history{
     display: flex;
     justify-content: center;
-
     background-image: url("./images/lettuce.png");
     background-repeat: no-repeat;
     background-size:cover;
@@ -254,29 +255,14 @@ nav{
     justify-content: flex-end;
     align-items: center;
     width: 70%;
-    background-image: url("./images/img4.jpeg");
+    height: 500px;
+    /* background-image: url("./images/img4.jpeg");
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center;
-    height: 30rem;
+    background-position: center; */
     box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -webkit-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
-}
-
-.history_text{
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background-color: #3E691C99;
-    font-weight: bold;
-}
-
-.history_text p{
-    color: white;
-    font-size: 18px;
-    text-align: center;
 }
 
 .conference{
@@ -513,7 +499,7 @@ nav{
 }
 
 .volunteer_text{
-    background-color: #2F5114;
+    background-color: #1B6E5099;
     width: 40%;
     margin: 3%;
     padding: 3%;
@@ -542,20 +528,19 @@ nav{
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    background-color: #81BA41;
-    color: white;
-    font-weight: bold;
+    background-color: white;
+    color: black;
     box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -webkit-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
 }
 
 footer{
-    background-color: #2F5114;
+    background-color: #1B6E50;
     height: 10rem;
     display: flex;
     flex-direction: row;
@@ -625,7 +610,7 @@ footer{
 }
 
 .footer_btn button{
-    background-color: #2F5114;
+    background-color: #1B6E50;
     font-weight:bold;
     color: white;
 }
@@ -635,3 +620,126 @@ footer{
     font-weight:bold;
     color: white;
 }
+
+.slider{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    height: 500px;
+    transition: 2s;
+    background-color: #1B6E50;
+  }
+  
+  .slide img{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    height: 80%;
+  }
+
+  .history_text{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 5px;
+}
+
+.history_text p{
+    font-weight: bold;
+    color: white;
+    font-size: 100%;
+    text-align: center;
+}
+
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 70%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 1px solid #DADADA;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #1B6E50;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin-top: 520px;
+  }
+  
+  .navigation-auto div{
+    border: 1px solid #DADADA;
+    background-color: #DADADA;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #1B6E50;
+    border: 1px solid #1B6E50;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #1B6E50;
+    border: 1px solid #1B6E50;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #1B6E50;
+    border: 1px solid #1B6E50;
+  }
+  
+
+        
