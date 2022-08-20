@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,8 +7,8 @@
 }
 
 html{
-    font-family: "Nunito", sans-serif;
-    font-size: 16px;
+    font-family: "Merriweather", sans-serif;
+    font-size: 14px;
 }
 header{
     background-color: #1B6E50;
@@ -28,6 +28,7 @@ button{
     border: none;
     cursor: pointer;
     background-color: #81BA41;
+    font-family: "Merriweather", sans-serif;
 }
 
 nav{
@@ -47,11 +48,16 @@ nav{
     padding-bottom: 1%;
 }
 
+.hamburger_icon{
+    display: none;
+}
+
 .nav_left h2{
     padding-left: 5%;
     font-size: 20px;
     color: white;
     font-weight: 400;
+    font-family: "Lato", sans-serif;
 }
 
 .logo{
@@ -89,7 +95,8 @@ nav{
 
 .nav_btn button{
     background-color: #1B6E50;
-    font-weight:bold;
+    font-family: "Merriweather", sans-serif;
+    font-size: 14px;
     color: white;
 }
 
@@ -110,6 +117,7 @@ nav{
 .nav_bottom{
     padding-top: 7%;
     padding-bottom: 2%;
+    margin-right: 2%;
 }
 
 .nav_links{
@@ -117,6 +125,7 @@ nav{
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
+    margin-bottom: 2%;
 
 }
 
@@ -144,6 +153,44 @@ nav{
     padding-bottom: 5px;
     border-radius: 5px;
     font-weight: bold;
+}
+
+@media screen and (max-width: 950px) {
+    .nav_left a{
+        margin-left: 5%;
+    }
+    
+    .nav_left h2{
+        display: none;
+    }
+    .nav_right{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5%;
+    }
+    .hamburger_icon{
+        display: inline-block;
+    }
+    .hamburger_icon img{
+        height: 3rem;
+    }
+    .nav_right_container{
+        display: none;
+    }
+    .nav_bottom{
+        display: none;
+    }
+
+    .conf_extras_container{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    
 }
 
 .body{
@@ -184,7 +231,8 @@ nav{
 }
 
 .hero_right{
-    width:50%;
+    margin-top: 2%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     padding-left: 3%;
@@ -193,9 +241,10 @@ nav{
 
 .hero_right h2{
     font-size: 55px;
-    font-weight: 300;
+    font-weight: 400;
     color: #2F5114;
     margin-top: 15%;
+    font-family: "Lato", sans-serif;
 }
 
 .hero_right h4{
@@ -268,7 +317,7 @@ nav{
 .conference{
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 7.5rem;
     margin-bottom: 5rem;
 }
 
@@ -286,12 +335,14 @@ nav{
 
 .conference_header h2{
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
 }
 
 .conference_header h3{
     font-size: 28px;
-    font-weight: 100;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
 }
 
 .conference_img{
@@ -319,10 +370,16 @@ nav{
 
 .conference_buttons{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 3%;
+    width: 100%;
+}
+
+.conference_buttons a{
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .conference_buttons button{
@@ -330,6 +387,7 @@ nav{
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 12.5rem;
     font-size: 14px;
     border-radius: 5px;
     border: none;
@@ -399,58 +457,60 @@ nav{
     text-align: center;
     width: 100%;
     background-color: #82A98D99;
-    height: 15%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Lato", sans-serif;
 }
 
 .extras_ltext h3{
     color: white;
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .extras_ltext h4{
     color: white;
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .rtext_container{
     text-align: center;
     width: 100%;
+    height: 20%;
     background-color: #82A98D99;
-    height: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Lato", sans-serif;
 }
 
 .extras_rtext h3{
     color: white;
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .extras_rtext h4{
     color: white;
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .rcontainer{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: end;
-    align-content:flex-end;
-    margin-top: 90%;
-    margin-left: 50%;
+    align-items: flex-end;
 }
 
 .application_button{
-    margin: 5%;
+    margin: 7.5%;
 }
 
 .application_button button{
@@ -495,11 +555,11 @@ nav{
     -webkit-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     margin-top: 2.5rem;
-    margin-bottom: 7.5rem;
+    margin-bottom: 5rem;
 }
 
 .volunteer_text{
-    background-color: #1B6E5099;
+    background-color: rgba(47, 81, 20, 0.8);
     width: 40%;
     margin: 3%;
     padding: 3%;
@@ -509,16 +569,19 @@ nav{
     box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -webkit-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
+    
 }
 
 .volunteer_text h3{
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
 }
 
 .volunteer_text h4{
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
     margin-top: 3%;
     margin-bottom: 7%;
 }
@@ -537,6 +600,34 @@ nav{
     box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -webkit-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
     -moz-box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.39);
+}
+
+.back_to_top{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.back_to_top_container{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.back_to_top_container img{
+    height: 2.5rem;
+}
+
+.back_to_top_container a{
+    margin-right: 2%;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+    color: #1B6E50;
 }
 
 footer{
@@ -566,7 +657,9 @@ footer{
 
 .footer_left h3{
     color: white;
-    font-weight: 100;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
 }
 
 .cert{
@@ -602,7 +695,6 @@ footer{
     padding-bottom: 2%;
     padding-left: 10%;
     list-style: none;
-
 }
 
 .footer_btn{
@@ -611,7 +703,7 @@ footer{
 
 .footer_btn button{
     background-color: #1B6E50;
-    font-weight:bold;
+    font-weight: 400;
     color: white;
 }
 
@@ -660,7 +752,7 @@ footer{
 }
 
 .history_text p{
-    font-weight: bold;
+    font-weight: 400;
     color: white;
     font-size: 100%;
     text-align: center;
@@ -677,7 +769,6 @@ footer{
   }
   
   .manual-btn{
-    border: 1px solid #DADADA;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -715,7 +806,6 @@ footer{
   }
   
   .navigation-auto div{
-    border: 1px solid #DADADA;
     background-color: #DADADA;
     padding: 5px;
     border-radius: 10px;
@@ -728,17 +818,14 @@ footer{
   
   #radio1:checked ~ .navigation-auto .auto-btn1{
     background: #1B6E50;
-    border: 1px solid #1B6E50;
   }
   
   #radio2:checked ~ .navigation-auto .auto-btn2{
     background: #1B6E50;
-    border: 1px solid #1B6E50;
   }
   
   #radio3:checked ~ .navigation-auto .auto-btn3{
     background: #1B6E50;
-    border: 1px solid #1B6E50;
   }
   
 
