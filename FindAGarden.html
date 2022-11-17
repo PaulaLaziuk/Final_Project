@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ACGA - Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/icon.png">
+    </head>
+    <body>
+        <header>
+        <nav>
+            <div class="nav_left">
+                <a class="logo" href="./index.html"><img class="logo" src="images/ACGA LOGO WHITE 1.png"></a>
+                <h2>American Community Gardening Association</h2>
+            </div>
+            <div class="nav_right">
+                <div class="hamburger_icon">
+                    <a class="hamburger" href="#"><img class="hamburger_menu" src="images/hamburger menu.png"></a>
+                </div>
+                <div class="nav_right_container">
+                <div class="nav_top">
+                    <ul class="nav_buttons">
+                        <a href="https://www.facebook.com/AmericanCommunityGardeningAssociation/"><img class="social" src="images/facebook.png"></a>
+                        <a href="https://www.instagram.com/communitygardeningacga/"><img class="social" src="images/instagram.png"></a>
+                        <a href="https://twitter.com/ACGA_CommGarden"><img class="social" src="images/twitter.png"></a>
+                        <a class="nav_btn" href="#"><button>Login</button></a>
+                        <a class="nav_btn" href="#"><button>Donate</button></a>
+                        <a class="nav_btn" href="#"><button>Connect</button></a>
+                        </ul>
+                </div>
+                <div class="nav_bottom">
+                    <ul class="nav_links">
+                        <li><a href="./FindAGarden.html">Find a Garden</a></li>
+                        <li><a href="#">News and Events</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Shop</a></li>
+                        </ul>
+                </div>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+<body>
+    <section class="garden">
+        <section class="Find_a_Garden">
+            <div class="Find_a_Garden_text">
+                <h2>Find a Garden</h2>
+                <div class="zip_code">
+                    <h5>Enter Your Zip Code</h5>
+                    <input type="text" id="zipcode" name="zipcode"><br><br>
+                    <a href="#" class="code"><button>Enter</button></a>
+                </div>
+            </div>
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(33.66,-84.44),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZnOtWL9fRjTrUC0lzSq21tXVK9QDSH-I&callback=myMap"></script>
+        </section>
+    </section>
+</body>
+
+        <footer>
+            <div class="footer_container">
+                <div class="footer_left">
+                    <a href="#"><img class="cert" src="images/guidestar.png"></a>
+                    <h3>3271 Main Street | College Park, GA 30337 USA</h3>
+                </div>
+                <div class="footer_right">
+                    <ul class="footer_buttons">
+                        <a href="https://www.facebook.com/AmericanCommunityGardeningAssociation/"><img class="social" src="images/facebook.png"></a>
+                        <a href="https://www.instagram.com/communitygardeningacga/"><img class="social" src="images/instagram.png"></a>
+                        <a href="https://twitter.com/ACGA_CommGarden"><img class="social" src="images/twitter.png"></a>
+                        <a class="footer_btn" href="#"><button>Donate</button></a>
+                        <a class="footer_btn" href="#"><button>Connect</button></a>
+                        </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
